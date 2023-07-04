@@ -4,4 +4,11 @@
 @import 'hero';
 @import 'project';
 @import 'work';
-@import 'extension'
+@import 'extension';
+@import 'customize';
+@import 'plan';
+
+
+body{
+scroll-behavior: smooth;
+}
