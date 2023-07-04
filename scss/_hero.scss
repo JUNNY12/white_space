@@ -1,0 +1,46 @@
+.hero{
+    height: 100%;
+    padding-top: 20vh;
+    background: $primary-color;
+
+    &__content{
+        width:80vw;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1{
+            color: $white-color-2;
+            font-size: pxToRem(32px);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+        p{
+            color: $white-color-2;
+            font-size: pxToRem(18px);
+            line-height: pxToRem(38px);
+            font-weight: 400;
+        }
+        button{
+            @include primary-button;
+            margin-top: 1rem;
+            padding: 1.2rem 1rem;
+            width: 200px;
+            font-weight: 600;
+        }
+    }
+
+    &__img{
+        margin-top: 2rem;
+        width: 100%;
+        height: 100%;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

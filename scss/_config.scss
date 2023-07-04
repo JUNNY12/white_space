@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+$primary-color:#043873;
+$light-yellow:#FFE492;
+$white-color:#FFFFFF;
+$white-color-2:#FFF;
+$light-blue:#4F9CF9;
+$dark-color:#000000;
+
+
+$root-font-size: 16px;
+
+@mixin primary-button{
+    background: $light-blue;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: $white-color;
+    border: none;
+    cursor: pointer;
+}
+
+@mixin transition-ease{
+    transition: all 0.3s ease;
+}
+
+@function set-text-color($color) {
+    @if(lightness($color) > 40%) {
+        @return $dark-color;
+    }
+
+    @else {
+        @return $white-color;
+    }
+}
+
+@function pxToRem($pixels) {
+  @return $pixels / $root-font-size * 1rem;
+}

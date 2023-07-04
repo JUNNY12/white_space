@@ -1,0 +1,152 @@
+header {
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: auto;
+    z-index: 10;
+    background: $primary-color;
+
+    nav {
+        .nav {
+            &__logo {
+                color: set-text-color($primary-color);
+                display: inline-flex;
+                align-items: center;
+
+                img {
+                    margin-top: 0.3rem;
+                    height: 30px;
+                    width: 20px;
+                    margin-right: 0.2rem;
+                }
+            }
+
+            &__wrapper {
+                top: 0;
+                position: fixed;
+                height: 100vh;
+                width: 250px;
+                right: 0;
+                background: set-text-color($primary-color);
+                overflow: hidden;
+                list-style: none;
+                padding-right: 1rem;
+                transform: translateX(100%);
+                visibility: hidden;
+                opacity: 0.98;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                @include transition-ease;
+
+                &.open {
+                    transform: translateX(0);
+                    visibility: visible;
+                    @include transition-ease;
+                }
+            }
+
+            &__lists {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                list-style: none;
+            }
+
+            &__link {
+                font-size: 1.5rem;
+            }
+
+            &__list {
+                transform: translateX(100vw);
+                margin-bottom: 1.5rem;
+                color: $primary-color;
+                @include transition-ease;
+
+                &.open {
+                    transform: translateX(0);
+                }
+            }
+
+            &__btns {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+            }
+
+            &__btn-try {
+                @include primary-button;
+            }
+
+            &__btn-login {
+                @extend .nav__btn-try;
+                background: $light-yellow;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        .menu {
+            z-index: 10;
+            position: absolute;
+            top: 2rem;
+            right: 1rem;
+            cursor: pointer;
+
+            &__hamburger {
+                width: 28px;
+                height: 3px;
+                background: set-text-color($primary-color);
+                @include transition-ease;
+
+                &::before {
+                    content: '';
+                    width: 32px;
+                    height: 3px;
+                    background: set-text-color($primary-color);
+                    position: absolute;
+                    top: -10px;
+                    @include transition-ease;
+                }
+
+                &::after {
+                    content: '';
+                    width: 25px;
+                    height: 3px;
+                    position: absolute;
+                    top: 10px;
+                    background: set-text-color($primary-color);
+                    @include transition-ease;
+                }
+
+                &.open {
+                    transform: rotate(720deg);
+                    background: transparent;
+
+                    &::before {
+                        transform: rotate(45deg) translate(5px, 8px);
+                        width: 28px;
+                        background: $primary-color;
+                    }
+
+                    &::after {
+                        transform: rotate(-45deg) translate(4px, -10px);
+                        width: 28px;
+                        background: $primary-color;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .nav__list:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.15s;
+    }
+}
