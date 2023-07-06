@@ -1,14 +1,21 @@
-@import 'config';
-@import 'menu';
-@import 'resets';
-@import 'hero';
-@import 'project';
-@import 'work';
-@import 'extension';
-@import 'customize';
-@import 'plan';
+@import 'config',
+'menu',
+'resets',
+'hero',
+'project',
+'work',
+'extension',
+'customize',
+'plan',
+'every',
+'data',
+'sponsor',
+'favorite',
+'client',
+'try',
+'footer'
+;
 
-
-body{
-scroll-behavior: smooth;
+body {
+    scroll-behavior: smooth;
 }

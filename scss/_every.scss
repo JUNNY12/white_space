@@ -1,0 +1,50 @@
+.every {
+    background: $primary-color;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    &__content {
+        width: 80vw;
+        margin: 4rem auto;
+        &-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: $white-color-2;
+            font-size: pxToRem(36px);
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.72px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            width: 250px;
+
+        }
+
+        p {
+            color: $white-color-2;
+            font-size: pxToRem(18px);
+            line-height: pxToRem(30px);
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: -0.36px;
+        }
+
+        button {
+            @include primary-button;
+            margin-top: 1rem;
+            padding: 1.2rem 1rem;
+            width: 200px;
+            font-weight: 600;
+            letter-spacing: -0.36px;
+        }
+    }
+
+}

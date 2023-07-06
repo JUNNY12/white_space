@@ -1,0 +1,62 @@
+.favorite {
+    background: $primary-color;
+
+    &__content {
+        width: 80vw;
+        padding: 4rem 0;
+        margin: 4rem auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: $white-color-2;
+            font-size: pxToRem(36px);
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.72px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            width: 250px;
+        }
+
+        p {
+            color: $white-color-2;
+            font-size: pxToRem(18px);
+            line-height: pxToRem(38px);
+            font-weight: 400;
+        }
+
+        button {
+            @include primary-button;
+            margin-top: 1rem;
+            padding: 1.2rem 1rem;
+            width: 200px;
+            font-weight: 600;
+            letter-spacing: -0.36px;
+        }
+    }
+
+    &__img {
+            margin-bottom: 2rem;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+}

@@ -1,0 +1,78 @@
+.sponsor {
+    background: $white-color;
+
+    &__content {
+        width: 80vw;
+        margin: 4rem auto;
+
+        &-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            color: $dark-color;
+            font-size: pxToRem(36px);
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -0.72px;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            width: 250px;
+
+            .sponsor__icon {
+                width: 250px;
+                display: inline-block;
+                position: absolute;
+                left: 32.986px;
+                top: 31px;
+                z-index: -1;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        p {
+            color: $dark-color;
+            font-size: pxToRem(18px);
+            line-height: pxToRem(38px);
+            font-weight: 400;
+        }
+
+        button {
+            @include primary-button;
+            margin-top: 1rem;
+            padding: 1.2rem 1rem;
+            width: 200px;
+            font-weight: 600;
+            letter-spacing: -0.36px;
+        }
+    }
+
+    &__imgs {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        gap: 1rem;
+
+        .img{
+            width:100px;
+            height: 100px;
+            object-fit: contain;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain
+            }
+        }
+    }
+
+}
