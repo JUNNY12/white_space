@@ -58,6 +58,11 @@ header {
 
             &__link {
                 font-size: 1.5rem;
+
+                &:hover{
+                    color: $light-yellow;
+                    @include transition-ease
+                }
             }
 
             &__list {
@@ -81,12 +86,14 @@ header {
 
             &__btn-try {
                 @include primary-button;
+                font-weight: 700
             }
 
             &__btn-login {
                 @extend .nav__btn-try;
                 background: $light-yellow;
                 padding: 0.5rem 1rem;
+                font-weight: 700;
             }
         }
 
