@@ -21,6 +21,22 @@ body {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4F9CF9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .zoom-effect {
     opacity: 0;
     transition: 500ms ease-in;
