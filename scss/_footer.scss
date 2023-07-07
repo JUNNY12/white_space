@@ -4,6 +4,19 @@ footer {
     padding-bottom: 1rem;
 
     .footer {
+        &_link {
+            text-decoration: underline;
+            color: $light-yellow;
+            text-align: center;
+            margin-top: 2rem;
+            @include transition-ease;
+
+            &:hover {
+                color: $white-color;
+                @include transition-ease;
+            }
+        }
+
         &__content {
             text-align: center;
             width: 80vw;
@@ -135,6 +148,8 @@ footer {
 
         img {
             margin-right: 1rem;
+            @include transition-ease;
+            cursor: pointer;
         }
     }
 }

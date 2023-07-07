@@ -136,7 +136,7 @@ header {
                 width: max-content;
                 font-size: pxToRem(54px);
 
-                .project__icon {
+                .work__icon {
                     top: 30px;
                     left: 70px;
                 }
@@ -162,7 +162,7 @@ header {
                 width: max-content;
                 font-size: pxToRem(54px);
 
-                .project__icon {
+                .extension__icon {
                     top: 30px;
                     left: 70px;
                 }
@@ -188,7 +188,7 @@ header {
                 width: max-content;
                 font-size: pxToRem(54px);
 
-                .project__icon {
+                .customize__icon {
                     top: 30px;
                     left: 70px;
                 }
@@ -214,7 +214,209 @@ header {
                 width: max-content;
                 font-size: pxToRem(54px);
 
-                .project__icon {
+                .plan__icon {
+                    top: 30px;
+                    left: 70px;
+                }
+            }
+        }
+
+        @include media-lg {
+            p {
+                padding-left: 10%;
+                padding-right: 10%;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    &__cards-container {
+        @include media-lg {
+            scroll-snap-type: none;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                padding: unset;
+                margin-bottom: unset;
+            }
+        }
+    }
+
+    &__card-item {
+        @include media-lg {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 300px;
+            margin-right: 1rem;
+            color: $dark-color;
+            background: whitesmoke;
+            box-shadow: -2px 2px 7px -3px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: -2px 2px 7px -3px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: -2px 2px 7px -3px rgba(0, 0, 0, 0.75);
+
+            button{
+                width: 200px;
+            }
+
+            h2 {
+                font-size: pxToRem(24px);
+                color: $dark-color
+            }
+
+
+            p {
+                color: $dark-color;
+                margin-bottom: 1rem;
+            }
+
+            h4 {
+                color: $dark-color;
+            }
+        }
+    }
+
+    &__card-item:nth-child(2) {
+        @include media-lg {
+            height: 550px;
+            background: $primary-color;
+            color: $white-color;
+
+            h2 {
+                font-size: pxToRem(24px);
+                color: $white-color;
+            }
+
+            p {
+                color: $white-color;
+            }
+
+            h4 {
+                color: $light-yellow;
+            }
+        }
+    }
+}
+
+.every {
+    &__content {
+        @include media-md {
+            &-header {
+                justify-content: flex-start;
+
+            }
+
+            h2 {
+                @include media-md {
+                    font-size: pxToRem(64px);
+                }
+
+                @include media-lg {
+                    font-size: pxToRem(72px);
+                }
+            }
+        }
+    }
+}
+
+.data {
+    &__content {
+        @include media-md {
+            h2 {
+                width: max-content;
+                font-size: pxToRem(54px);
+
+                .data__icon {
+                    top: 30px;
+                    left: 70px;
+                }
+            }
+        }
+
+        @include media-lg {
+            flex-direction: row;
+            column-gap: 3rem;
+            text-align: left;
+
+            h2 {
+                text-align: left;
+            }
+        }
+    }
+}
+
+.sponsor {
+    background: $white-color;
+
+    &__content {
+        @include media-lg {
+            h2 {
+                font-size: pxToRem(54px);
+                width: max-content;
+            }
+        }
+    }
+
+    &__imgs {
+        @include media-md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include media-lg {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+}
+
+.favorite {
+    &__content {
+        @include media-md {
+            h2 {
+                font-size: pxToRem(54px);
+
+                .favorite__icon {
+                    top: 30px;
+                    left: 70px;
+                }
+            }
+
+        }
+
+        @include media-lg {
+            flex-direction: row;
+            column-gap: 3rem;
+            text-align: left;
+
+            h2 {
+                text-align: left;
+            }
+
+            .text-content {
+                width: 50%;
+            }
+        }
+
+
+    }
+
+    &__img {
+        @include media-md {
+            width: 50%;
+        }
+    }
+}
+
+.client {
+    &__content {
+        @include media-md {
+            h2 {
+                width: max-content;
+                font-size: pxToRem(54px);
+
+                .client__icon {
                     top: 30px;
                     left: 70px;
                 }
@@ -272,69 +474,83 @@ header {
         }
     }
 
-    &__card-item:nth-child(2) {
-        @include media-lg {
-            height: 600px;
-            background: $primary-color;
-            color: $white-color;
-
-            h2 {
-                font-size: pxToRem(24px);
-                color: $white-color;
-            }
-
-            p {
-                color: $white-color;
-            }
-
-            h4 {
-                color: $light-yellow;
-            }
-        }
-    }
 }
 
-.every {
-    &__content {
-        @include media-md {
-            &-header {
-                justify-content: flex-start;
 
-            }
-
-            h2 {
-                @include media-md {
-                    font-size: pxToRem(64px);
-                }
-                @include media-lg{
-                    font-size: pxToRem(72px);
-                }
-            }
-        }
-    }
-}
-
-.data{
+.try {
     &__content {
         @include media-md {
             h2 {
-                width: max-content;
                 font-size: pxToRem(54px);
-
-                .data__icon {
-                    top: 30px;
-                    left: 70px;
-                }
             }
+
         }
 
         @include media-lg {
-            flex-direction: row;
-            column-gap: 3rem;
-            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}
 
-            h2 {
+footer {
+    .footer {
+        &__content {
+            @include media-md {
                 text-align: left;
+            }
+
+            &-grid {
+                @include media-md {
+                    place-items: normal start;
+                    row-gap: 3rem;
+
+                    &-logo {
+                        margin-bottom: 1rem;
+
+                        .img {
+                            transform: scale(2);
+                            margin-right: 1rem;
+                        }
+
+                        .name {
+                            font-size: pxToRem(48px);
+                        }
+                    }
+
+                    p {
+                        max-width: 350px;
+                    }
+                }
+
+                @include media-lg {
+                    grid-template-columns: repeat(5, 1fr);
+                    column-gap: 3.5rem;
+                    place-items: center start;  
+                }
+            }
+
+            &-bottom-grid {
+                @include media-lg {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+            }
+        }
+    }
+
+    .social-icons {
+        @include media-md {
+            .img-icon {
+                transform: scale(2);
+                margin-right: 2rem;
+
+
+                &:hover {
+                    transform: scale(2.2);
+                    @include transition-ease;
+                }
             }
         }
     }

@@ -41,6 +41,12 @@
 
             img{
                 margin-right: 1rem;
+                @include transition-ease;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    @include transition-ease;
+                }
             }
         }
     }

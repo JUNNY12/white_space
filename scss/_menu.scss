@@ -59,7 +59,7 @@ header {
             &__link {
                 font-size: 1.5rem;
 
-                &:hover{
+                &:hover {
                     color: $light-yellow;
                     @include transition-ease
                 }
@@ -156,4 +156,8 @@ header {
     .nav__list:nth-child(#{$i}) {
         transition-delay: ($i * 0.1s) + 0.15s;
     }
+}
+
+.header-shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

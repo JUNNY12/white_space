@@ -20,3 +20,15 @@
 body {
     scroll-behavior: smooth;
 }
+
+.zoom-effect {
+    opacity: 0;
+    transition: 500ms ease-in;
+    transform: scale(0.9);
+}
+
+.scrolled {
+    opacity: 1;
+    transform: scale(1);
+    transition: 500ms ease-in;
+}
