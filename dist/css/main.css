@@ -1694,6 +1694,7 @@ footer .social-icons img {
 
 body {
   scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
